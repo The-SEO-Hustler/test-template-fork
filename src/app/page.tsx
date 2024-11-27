@@ -9,6 +9,11 @@ import CasesSelector from '@/components/caseStudies/casesSelector'
 import FaqSelector from '@/components/faq/faqSelector'
 import BlogSelector from '@/components/blogSection/blog-selector'
 import TestimonialSelector from '@/components/testimonials/testimonialsSelector'
+
+export const metadata = {
+  robots: { index: false }
+}
+
 export default function Home() {
 
   return (
@@ -20,15 +25,31 @@ export default function Home() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(pageData.homeJsonSchema) }}
         />
       }
+
       <HeroSelector />
-      <CtaSelector />
-      <TestimonialSelector />
-      <FeatureSelector />
-      <PortifolioSelector />
+      {pageData.cta &&
+        <CtaSelector />
+      }
+      {pageData.testimonialsSection &&
+        <TestimonialSelector />
+      }
+      {pageData.features &&
+        <FeatureSelector />
+      }
+      {pageData.portifolio &&
+        <PortifolioSelector />
+      }
+
       <Map data={pageData.map} />
-      <CasesSelector />
-      <FaqSelector />
-      {/* <BlogSelector /> */}
+      {pageData.cases &&
+        <CasesSelector />
+      }
+      {pageData.faq &&
+        <FaqSelector />
+      }
+      {pageData.blogSection &&
+        <BlogSelector />
+      }
       <FormSection data={pageData.contact} />
     </>
   );
