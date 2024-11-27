@@ -15,7 +15,7 @@ const config: Config = {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
-        themep: "#000",
+        themep: "#0000ff",
         themef: "#fff",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
