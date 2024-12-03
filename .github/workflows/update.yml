@@ -18,8 +18,8 @@ jobs:
 
     - name: Set Up Git Configuration
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "actions@github.com"
+        git config user.name "alexRicc2"
+        git config user.email "alex.65.santanna@gmail.com"
 
     - name: Add Upstream Remote
       run: git remote add upstream https://github.com/The-SEO-Hustler/static-pages-websites.git
