@@ -30,7 +30,8 @@ export const pageData: PageDataType = {
   },
   hero: {
     templateNumber: 8,
-    heading: "Dominate San Diego Search Results another change from upstream",
+    heading:
+      "Dominate San Diego Search Results another change from upstream, changed again in same commit",
     text: `<p>imagine your website appearing at the top of Google when potential customers search for products or services you offer.<br></br> With our strategic SEO approach, we'll help you outrank your competitors and capture valuable leads in the San Diego market.</p>`,
     button: `Talk to us`,
     tag: "Improve SEO",
@@ -51,7 +52,8 @@ export const pageData: PageDataType = {
   },
   cta: {
     templateNumber: 1,
-    heading: "San Diego SEO: Drive Organic Traffic to Your Business change from upstream",
+    heading:
+      "San Diego SEO: Drive Organic Traffic to Your Business change from upstream",
     text: `<p>Are you a San Diego business owner struggling to get found online?</p><p>In today's digital world, ranking high in search results is essential for attracting customers and growing your business.</p><p>Our expert San Diego SEO services can help you climb the rankings, drive more organic traffic to your website, and achieve your business goals</p>`,
     button: "contact us",
   },
