@@ -30,7 +30,7 @@ export const pageData: PageDataType = {
   },
   hero: {
     templateNumber: 8,
-    heading: "Dominate San Diego Search Results",
+    heading: "Dominate San Diego Search Results another change from upstream",
     text: `<p>imagine your website appearing at the top of Google when potential customers search for products or services you offer.<br></br> With our strategic SEO approach, we'll help you outrank your competitors and capture valuable leads in the San Diego market.</p>`,
     button: `Talk to us`,
     tag: "Improve SEO",
