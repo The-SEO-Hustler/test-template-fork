@@ -23,14 +23,14 @@ export const pageData: PageDataType = {
     logo: null, //path image logo (public folder)
   },
   navbar: {
-    templateNumber: 2,
+    templateNumber: 3,
   },
   footer: {
     templateNumber: 1,
   },
   hero: {
     templateNumber: 8,
-    heading: "Dominate San Diego Search Results",
+    heading: "Dominate San Diego Search Results changed",
     text: `<p>imagine your website appearing at the top of Google when potential customers search for products or services you offer.<br></br> With our strategic SEO approach, we'll help you outrank your competitors and capture valuable leads in the San Diego market.</p>`,
     button: `Talk to us`,
     tag: "Improve SEO",
