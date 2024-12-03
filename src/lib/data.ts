@@ -122,7 +122,7 @@ export const pageData: PageDataType = {
   website: {
     name: "Static Pages Template",
     metadata: {
-      robots: { index: false },
+      robots: { index: false, follow: false },
       title: "Static Pages Template",
       description:
         "Transform your San Diego business with proven local SEO strategies. From Gaslamp Quarter to La Jolla, we deliver results that matter. 15+ years of local expertise!",
