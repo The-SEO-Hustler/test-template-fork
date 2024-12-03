@@ -41,7 +41,6 @@ const Navbar6 = ({ sample = false }) => {
         onClick={() => {
           closeNavbar();
         }}
-        aria-hidden="true"
         className={`fixed bg-gray-800/40 inset-0 z-30 ${
           openNavbar ? "flex lg:hidden" : "hidden"
         } ${sample && "!z-0"}`}
@@ -61,7 +60,6 @@ const Navbar6 = ({ sample = false }) => {
               className="outline-none border-r border-r-gray-200 dark:border-r-gray-800 pr-3 relative py-3 children:flex"
             >
               <span
-                aria-hidden="true"
                 className={`
                             h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-200 transition duration-300
                             ${
@@ -72,7 +70,6 @@ const Navbar6 = ({ sample = false }) => {
                         `}
               />
               <span
-                aria-hidden="true"
                 className={`
                             mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-200 transition duration-300
                             ${

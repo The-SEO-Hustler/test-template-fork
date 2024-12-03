@@ -22,17 +22,21 @@ const PorfolioSection2 = ({ data }) => {
                 key={idx}
                 className="relative p-5 sm:p-6 md:p-8 rounded-lg bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 space-y-6"
               >
-                <Image
-                  src={card.image}
-                  alt="project cover"
-                  width={1300}
-                  height={900}
-                  className="w-full aspect-[4/3.3] rounded object-cover"
-                />
+                {card.image && (
+                  <Image
+                    src={card.image}
+                    alt="project cover"
+                    width={1300}
+                    height={900}
+                    className="w-full aspect-[4/3.3] rounded object-cover"
+                  />
+                )}
                 <div className="flex flex-col justify-end space-y-5 text-gray-300">
-                  <h3 className="font-semibold text-2xl text-gray-900 dark:text-white">
-                    {card.title}
-                  </h3>
+                  {card.title && (
+                    <h3 className="font-semibold text-2xl text-gray-900 dark:text-white">
+                      {card.title}
+                    </h3>
+                  )}
                   <div
                     className="text-gray-700 dark:text-gray-300 line-clamp-2"
                     dangerouslySetInnerHTML={{ __html: card.description }}

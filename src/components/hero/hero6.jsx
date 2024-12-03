@@ -1,8 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Form from "../form";
+import { ButtonHero6 } from "./buttons";
 
 export default function HeroSection6({ data }) {
   const { heading, text, button, skills } = data;
@@ -10,7 +7,7 @@ export default function HeroSection6({ data }) {
     <>
       <section className="py-8 ">
         <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
-          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-14 gap-y-8 md:items-end">
+          <div className="mt-4 sm:mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-14 gap-y-8 md:items-end">
             <div className="space-y-4 md:space-y-6 md:col-span-2 lg:col-span-1 w-full max-w-3xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">
               <h1 className="font-display font-semibold text-2xl md:text-3xl text-gray-900 dark:text-white">
                 {heading}
@@ -20,19 +17,7 @@ export default function HeroSection6({ data }) {
                 dangerouslySetInnerHTML={{ __html: text }}
               ></div>
               <div className="flex justify-center lg:justify-start">
-                <Dialog>
-                  <DialogTrigger asChild>
-                    <button className="px-6 h-11 flex items-center rounded-lg bg-themep dark:bg-white text-themef dark:text-gray-900 text-sm transition ease-linear hover:bg-themep">
-                      {button}
-                    </button>
-                  </DialogTrigger>
-                  <DialogContent
-                    onOpenAutoFocus={(event) => event.preventDefault()}
-                    className="sm:max-w-md"
-                  >
-                    <Form />
-                  </DialogContent>
-                </Dialog>
+                <ButtonHero6 button={button} />
               </div>
             </div>
             <div className="flex justify-center">
@@ -41,9 +26,10 @@ export default function HeroSection6({ data }) {
                 <span className="absolute inset-x-0 bottom-0 top-16 rounded-lg bg-gray-100 dark:bg-gray-900" />
                 <Image
                   src="/customized-seo.webp"
-                  width={1240}
-                  height={1376}
-                  alt="Developer with laptop smile"
+                  priority
+                  width={640}
+                  height={506}
+                  alt=""
                   className="relative w-full h-auto max-h-96 lg:max-h-[26rem]"
                 />
               </div>

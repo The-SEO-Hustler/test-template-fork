@@ -17,9 +17,9 @@ const FooterItem = ({ text, link }) => {
 const FooterBlockItem = ({ title, items }) => {
   return (
     <div className="space-y-5">
-      <h1 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+      <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
         {title}
-      </h1>
+      </h2>
       <ul className="space-y-3">
         {items.map((item) => (
           <FooterItem key={item.id} {...item} />
@@ -41,13 +41,13 @@ const footerBlocks = [
       },
       {
         id: 2,
-        text: "Blog",
-        link: "/posts",
+        text: "Case Studies",
+        link: "/#cases",
       },
       {
         id: 3,
-        text: "Case studies",
-        link: "/#cases",
+        text: "FAQs",
+        link: "/#faq",
       },
     ],
   },

@@ -1,13 +1,10 @@
-"use client";
-
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Form from "../form";
+import { ButtonHero1 } from './buttons'
 export default function HeroSection({ data }) {
   const { heading, text, button, tag } = data;
 
   return (
     <>
-      <section className="bg-gray-100  py-32 sm:py-36 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
+      <section className="bg-gray-100  py-20 sm:py-20 lg:py-40 overflow-hidden h-[100dvh] min-h-max flex items-center relative">
         <div
           className="absolute top-0 left-0 -translate-x-[54%] -translate-y-[70%] w-2/5 rounded-full aspect-square bg-themep/70
   backdrop-filter blur-3xl opacity-50"
@@ -49,33 +46,7 @@ export default function HeroSection({ data }) {
               ></div>
             </div>
             <div className="flex justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <button className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-themep text-themef hover:bg-opacity-80">
-                    {button}
-                    <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 20 20"
-                        fill="currentColor"
-                        className="w-5 h-5"
-                      >
-                        <path
-                          fillRule="evenodd"
-                          d="M5 10a.75.75 0 01.75-.75h6.638L10.23 7.29a.75.75 0 111.04-1.08l3.5 3.25a.75.75 0 010 1.08l-3.5 3.25a.75.75 0 11-1.04-1.08l2.158-1.96H5.75A.75.75 0 015 10z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                    </span>
-                  </button>
-                </DialogTrigger>
-                <DialogContent
-                  onOpenAutoFocus={(event) => event.preventDefault()}
-                  className="sm:max-w-md"
-                >
-                  <Form />
-                </DialogContent>
-              </Dialog>
+              <ButtonHero1 button={button}/>
             </div>
           </div>
         </div>

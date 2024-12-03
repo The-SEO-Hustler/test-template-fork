@@ -4,17 +4,25 @@ import HeroSelector from '@/components/hero/heroSelector'
 import { pageData } from '@/lib/data'
 import CtaSelector from '@/components/cta/ctaSelector'
 import PortifolioSelector from '@/components/portifolio/portifolioSelector'
-import FeatureSelector from '@/components/featuresSection/featureSelector'
+import ServicesSelector from '@/components/servicesSection/servicesSelector'
 import CasesSelector from '@/components/caseStudies/casesSelector'
 import FaqSelector from '@/components/faq/faqSelector'
 import BlogSelector from '@/components/blogSection/blog-selector'
 import TestimonialSelector from '@/components/testimonials/testimonialsSelector'
-
-export const metadata = {
-  robots: { index: false }
-}
-
 export default function Home() {
+
+  const componentMap = {
+    hero: HeroSelector,
+    cta: CtaSelector,
+    cases: CasesSelector,
+    services: ServicesSelector,
+    faq: FaqSelector,
+    contact: FormSection,
+    testimonialsSection: TestimonialSelector,
+    portfolio: PortifolioSelector,
+    map: Map,
+    blogSection: BlogSelector,
+  };
 
   return (
     <>
@@ -22,35 +30,20 @@ export default function Home() {
       {pageData.homeJsonSchema &&
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(pageData.homeJsonSchema) }}
+          dangerouslySetInnerHTML={{ __html: pageData.homeJsonSchema }}
         />
       }
 
-      <HeroSelector />
-      {pageData.cta &&
-        <CtaSelector />
-      }
-      {pageData.testimonialsSection &&
-        <TestimonialSelector />
-      }
-      {pageData.features &&
-        <FeatureSelector />
-      }
-      {pageData.portifolio &&
-        <PortifolioSelector />
-      }
+      {pageData.sections.map((section, index) => {
+        const Component = componentMap[section.type];
+        return section.data ? (
+          <Component key={`${section.type}-${index}`} data={section.data} />
+        ) : null
 
-      <Map data={pageData.map} />
-      {pageData.cases &&
-        <CasesSelector />
-      }
-      {pageData.faq &&
-        <FaqSelector />
-      }
-      {pageData.blogSection &&
-        <BlogSelector />
-      }
-      <FormSection data={pageData.contact} />
+      })}
+
+
+      {/* {pageData.blogSection && <BlogSelector />} */}
     </>
   );
 }

@@ -77,7 +77,7 @@ const Navbar5 = ({ sample = false }) => {
             <Dialog>
               <DialogTrigger asChild>
                 <button className="px-6 py-3 duration-300 ease-linear flex justify-center w-full sm:w-auto border border-themep text-themep hover:text-white hover:bg-themep dark:bg-gray-900 dark:text-white dark:border-gray-800 dark:hover:bg-gray-950 rounded-xl">
-                  Get It touch
+                  Get in Touch
                 </button>
               </DialogTrigger>
               <DialogContent
@@ -98,7 +98,6 @@ const Navbar5 = ({ sample = false }) => {
           >
             <span className="sr-only">Toggle navbar</span>
             <span
-              aria-hidden="true"
               className={`
                             flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
                             ${
@@ -109,7 +108,6 @@ const Navbar5 = ({ sample = false }) => {
                         `}
             />
             <span
-              aria-hidden="true"
               className={`
                             flex mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
                             ${

@@ -21,7 +21,6 @@ const Navbar4 = ({ sample = false }) => {
         onClick={() => {
           closeNavbar();
         }}
-        aria-hidden="true"
         className={`fixed bg-gray-800/40 inset-0 z-30  ${
           openNavbar ? "flex lg:hidden" : "hidden"
         }
@@ -77,7 +76,7 @@ const Navbar4 = ({ sample = false }) => {
                   href="/#faq"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-themep"
                 >
-                  Faq
+                  FAQs
                 </Link>
               </li>
               <li>
@@ -85,7 +84,7 @@ const Navbar4 = ({ sample = false }) => {
                   href="/#contact"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-themep"
                 >
-                  Talk to us
+                  Talk to Us
                 </Link>
               </li>
             </ul>

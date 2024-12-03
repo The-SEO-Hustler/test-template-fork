@@ -11,10 +11,22 @@ const BlogSelector = () => {
     3: Blog3,
   };
 
-  const SelectedBlog =
-    BlogComponents[pageData.blogSection.templateNumber] || Blog1;
+  let blogData = pageData.sections.find(
+    (section) => section.type === "blogSection"
+  );
+  if (!blogData) {
+    blogData = {
+      templateNumber: 1,
+      templateNumber: 1,
+      heading: "Blog",
+      text: null,
+      tag: "articles",
+    };
+  }
 
-  return <SelectedBlog data={pageData.blogSection} />;
+  const SelectedBlog = BlogComponents[blogData.templateNumber] || Blog1;
+
+  return <SelectedBlog data={blogData} />;
 };
 
 export default BlogSelector;

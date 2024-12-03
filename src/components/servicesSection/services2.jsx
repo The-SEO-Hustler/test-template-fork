@@ -34,9 +34,9 @@ const ServiceCard = ({ title, description, icon }) => {
         </div>
       </div>
       <div className="space-y-5 flex flex-col md:flex-1 relative">
-        <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
           {title}
-        </h2>
+        </h3>
         <div
           className="text-gray-700 dark:text-gray-300 text-justify line-clamp-3"
           dangerouslySetInnerHTML={{ __html: description }}

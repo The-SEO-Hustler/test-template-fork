@@ -24,9 +24,7 @@ const CtaSection2 = ({ data }) => {
           </div>
           <div className="mx-auto text-center max-w-xl md:max-w-2xl relative space-y-8">
             <h2 className="text-3xl/tight sm:text-4xl/tight md:text-5xl/tight font-bold text-blue-950 dark:text-white">
-              <span className="text-transparent bg-clip-text bg-gradient-to-br from-themep from-20% via-themep/50 via-30% to-themep/50">
-                {heading}
-              </span>
+              <span className="text-themep">{heading}</span>
             </h2>
             <div
               className="text-gray-700 dark:text-gray-300"

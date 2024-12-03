@@ -4,17 +4,21 @@ import Link from "next/link";
 const BlogCard = ({ image, title, description }) => {
   return (
     <div className="bg-white h-full dark:bg-gray-950 border border-gray-100 dark:border-gray-900 duration-300 ease-linear hover:border-gray-200 dark:hover:border-gray-800 p-0.5 flex flex-col group">
-      <Image
-        alt="banner image"
-        className="w-full aspect-video object-cover relative"
-        src={image}
-        width={1263}
-        height={1291}
-      />
+      {image && (
+        <Image
+          alt="banner image"
+          className="w-full aspect-video object-cover relative"
+          src={image}
+          width={1263}
+          height={1291}
+        />
+      )}
       <div className="px-4 lg:px-6 py-5 lg:py-8">
-        <h3 className="text-gray-900 dark:text-white font-semibold text-2xl lg:text-3xl">
-          {title}
-        </h3>
+        {title && (
+          <h3 className="text-gray-900 dark:text-white font-semibold text-2xl lg:text-3xl">
+            {title}
+          </h3>
+        )}
         <div
           className="text-gray-700 dark:text-gray-300 text-sm"
           dangerouslySetInnerHTML={{ __html: description }}

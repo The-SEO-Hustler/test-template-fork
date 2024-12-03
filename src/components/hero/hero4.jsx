@@ -1,7 +1,5 @@
-"use client";
 
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-import Form from "../form";
+import { ButtonHero4 } from './buttons'
 
 export default function HeroSection({ data }) {
   const { heading, text, button, skills } = data;
@@ -13,7 +11,7 @@ export default function HeroSection({ data }) {
           <div className="h-20 w-3/5 bg-gradient-to-r from-themep opacity-40 blur-2xl dark:from-purple-700 dark:opacity-40"></div>
         </div>
         <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-2/5 aspect-[2/0.5] bg-gradient-to-br from-themep to-themep rounded-full opacity-50 blur-2xl"></div>
-        <div className="relative mx-auto pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10">
+        <div className="relative mx-auto pt-16 md:pt-32 pb-24 lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 text-center space-y-10">
           <h1 className="text-gray-900 dark:text-white mx-auto max-w-5xl font-bold text-4xl/tight sm:text-5xl/tight lg:text-6xl/tight xl:text-7xl/tight">
             {heading}
           </h1>
@@ -22,19 +20,7 @@ export default function HeroSection({ data }) {
             dangerouslySetInnerHTML={{ __html: text }}
           ></div>
           <div className="flex justify-center items-center flex-wrap mx-auto gap-4">
-            <Dialog>
-              <DialogTrigger asChild>
-                <div className="flex items-center h-12 px-6 rounded-full bg-themep text-themef border border-themep">
-                  {button}
-                </div>
-              </DialogTrigger>
-              <DialogContent
-                onOpenAutoFocus={(event) => event.preventDefault()}
-                className="sm:max-w-md"
-              >
-                <Form />
-              </DialogContent>
-            </Dialog>
+            <ButtonHero4 button={button}/>
           </div>
           {skills && (
             <div className="text-left grid lg:grid-cols-3 p-6 rounded-2xl bg-gradient-to-tr from-gray-50 to-gray-200 dark:from-gray-900 dark:to-gray-800 border border-gray-100 dark:border-gray-800 max-w-2xl lg:max-w-5xl mx-auto lg:divide-x divide-y lg:divide-y-0 divide-gray-300 dark:divide-gray-800">
