@@ -25,7 +25,7 @@ jobs:
       - name: Merge Upstream Changes
         run: |
           git checkout main
-          git merge upstream/main --no-commit --strategy=ours
+          git merge upstream/main --no-commit --strategy=ours --allow-unrelated-histories
           git checkout HEAD -- src/lib/data.ts # Exclude changes to src/lib/data.ts
           git commit -m "Merge updates from upstream while ignoring src/lib/data.ts"
 
