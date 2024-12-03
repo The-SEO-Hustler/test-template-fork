@@ -1,46 +1,40 @@
 name: Sync with Upstream
 
 on:
-  workflow_dispatch: # Allows manual triggering of the workflow
-  schedule:
-    - cron: '0 2 * * 1' # Runs every Monday at 2 AM
+  workflow_dispatch:
 
 jobs:
-  sync-upstream:
+  sync:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Fork Repository
-      uses: actions/checkout@v3
-      with:
-        persist-credentials: false # Disables the default token to avoid pushing directly
-        fetch-depth: 0 # Fetch all history for accurate merge
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0  # Ensure full history is fetched
+      
+      - name: Configure Git User
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
 
-    - name: Set Up Git Configuration
-      run: |
-        git config user.name "alexRicc2"
-        git config user.email "alex.65.santanna@gmail.com"
+      - name: Fetch Upstream
+        run: |
+          git remote add upstream https://github.com/The-SEO-Hustler/static-pages-websites.git
+          git fetch upstream
 
-    - name: Add Upstream Remote
-      run: git remote add upstream https://github.com/The-SEO-Hustler/static-pages-websites.git
+      - name: Merge Upstream Changes
+        run: |
+          git merge upstream/main || true  # Avoid failure on conflicts
 
-    - name: Fetch Upstream Changes
-      run: git fetch upstream
+      - name: Reset src/lib/data.ts
+        run: |
+          git checkout HEAD src/lib/data.ts
+          git add src/lib/data.ts
+          git commit -m "Keep src/lib/data.ts intact" || true  # Avoid error if no changes
 
-    - name: Configure .gitattributes
-      run: |
-        echo "src/lib/data.ts merge=ours" >> .gitattributes
-        git add .gitattributes
-        git commit -m "Configure .gitattributes for src/lib/data.ts"
+      - name: Configure Git for Authentication
+        run: |
+          git remote set-url origin https://${{ secrets.GITHUB_TOKEN }}@github.com/The-SEO-Hustler/test-template-fork.git
 
-    - name: Merge Updates from Upstream
-      run: |
-        git merge upstream/main || true # Avoid failure on conflicts
-        git checkout HEAD src/lib/data.ts # Reset ignored file
-        git add src/lib/data.ts
-        git commit -m "Merge upstream changes while keeping src/lib/data.ts intact" || true
-
-    - name: Push Changes to Fork
-      run: git push origin main
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push Changes to Fork
+        run: git push origin main
