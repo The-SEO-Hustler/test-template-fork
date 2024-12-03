@@ -51,7 +51,7 @@ export const pageData: PageDataType = {
   },
   cta: {
     templateNumber: 1,
-    heading: "San Diego SEO: Drive Organic Traffic to Your Business",
+    heading: "San Diego SEO: Drive Organic Traffic to Your Business change from upstream",
     text: `<p>Are you a San Diego business owner struggling to get found online?</p><p>In today's digital world, ranking high in search results is essential for attracting customers and growing your business.</p><p>Our expert San Diego SEO services can help you climb the rankings, drive more organic traffic to your website, and achieve your business goals</p>`,
     button: "contact us",
   },
