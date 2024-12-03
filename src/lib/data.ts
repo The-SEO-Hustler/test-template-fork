@@ -57,7 +57,7 @@ export const pageData: PageDataType = {
   },
   features: {
     templateNumber: 1,
-    heading: "Our Proven San Diego SEO Services",
+    heading: "Our Proven San Diego SEO Services, changed data.ts in main repo",
     text: "<p>We offer a comprehensive suite of SEO services tailored to the unique needs of San Diego businesses:</p>",
     cards: [
       {
