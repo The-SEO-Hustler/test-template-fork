@@ -22,9 +22,9 @@ const CtaSection1 = ({ data }) => {
               {button && (
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="h-12 px-5 rounded-md flex items-center bg-themep text-themef">
+                    <div className="h-12 px-5 rounded-md flex items-center bg-themep text-themef cursor-pointer">
                       {button}
-                    </button>
+                    </div>
                   </DialogTrigger>
                   <DialogContent
                     onOpenAutoFocus={(event) => event.preventDefault()}

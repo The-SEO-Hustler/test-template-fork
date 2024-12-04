@@ -8,7 +8,7 @@ export function ButtonHero8({ button }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="flex items-center justify-center gap-x-2 px-5 py-2.5 border border-transparent bg-themep text-themef">
+        <div className=" cursor-pointer flex items-center justify-center gap-x-2 px-5 py-2.5 border border-transparent bg-themep text-themef">
           {button}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -26,7 +26,7 @@ export function ButtonHero8({ button }) {
               d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
             />
           </svg>
-        </button>
+        </div>
       </DialogTrigger>
       <DialogContent
         onOpenAutoFocus={(event) => event.preventDefault()}
@@ -42,9 +42,9 @@ export function ButtonHero6({ button }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="px-6 h-11 flex items-center rounded-lg bg-themep dark:bg-white text-themef dark:text-gray-900 text-sm transition ease-linear hover:bg-themep">
+        <div className="cursor-pointer px-6 h-11 flex items-center rounded-lg bg-themep dark:bg-white text-themef dark:text-gray-900 text-sm transition ease-linear hover:bg-themep">
           {button}
-        </button>
+        </div>
       </DialogTrigger>
       <DialogContent
         onOpenAutoFocus={(event) => event.preventDefault()}
@@ -60,8 +60,8 @@ export function ButtonHero5({ button }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button
-          className="flex text-themef justify-center items-center w-max min-w-max sm:w-max px-6 h-12 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
+        <div
+          className="flex cursor-pointer text-themef justify-center items-center w-max min-w-max sm:w-max px-6 h-12 rounded-full outline-none relative overflow-hidden border duration-300 ease-linear
                           after:absolute after:inset-x-0 after:aspect-square after:scale-0 after:opacity-70 after:origin-center after:duration-300 after:ease-linear after:rounded-full after:top-0 after:left-0 after:bg-themep hover:after:opacity-100 hover:after:scale-[2.5] bg-themep border-transparent hover:border-themep"
         >
           <span className="hidden sm:flex relative z-[5]">{button}</span>
@@ -81,7 +81,7 @@ export function ButtonHero5({ button }) {
               />
             </svg>
           </span>
-        </button>
+        </div>
       </DialogTrigger>
       <DialogContent
         onOpenAutoFocus={(event) => event.preventDefault()}
@@ -97,7 +97,7 @@ export function ButtonHero4({ button }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <div className="flex items-center h-12 px-6 rounded-full bg-themep text-themef border border-themep">
+        <div className="flex items-center h-12 px-6 rounded-full bg-themep text-themef border border-themep cursor-pointer">
           {button}
         </div>
       </DialogTrigger>
@@ -114,7 +114,7 @@ export function ButtonHero4({ button }) {
 export function ButtonHero3({ button }) {
   <Dialog>
     <DialogTrigger asChild>
-      <button className="px-6 items-center h-12 rounded-3xl bg-themep text-themef duration-300 ease-linear flex justify-center w-full sm:w-auto">
+      <button className="cursor-pointer px-6 items-center h-12 rounded-3xl bg-themep text-themef duration-300 ease-linear flex justify-center w-full sm:w-auto">
         {button}
       </button>
     </DialogTrigger>
@@ -131,7 +131,7 @@ export function ButtonHero1({ button }) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="px-8 h-12 rounded-full flex items-center gap-x-3 bg-themep text-themef hover:bg-opacity-80">
+        <div className="cursor-pointer px-8 h-12 rounded-full flex items-center gap-x-3 bg-themep text-themef hover:bg-opacity-80">
           {button}
           <span>
             <svg
@@ -147,7 +147,7 @@ export function ButtonHero1({ button }) {
               />
             </svg>
           </span>
-        </button>
+        </div>
       </DialogTrigger>
       <DialogContent
         onOpenAutoFocus={(event) => event.preventDefault()}

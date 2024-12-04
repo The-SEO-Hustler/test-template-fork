@@ -11,7 +11,7 @@ const Navbar3 = ({ sample = false }) => {
   };
   return (
     <header
-      className={`absolute top-0 inset-x-0 z-50 h-24 flex items-center ${
+      className={`sticky bg-white top-0 inset-x-0 z-50 h-24 flex items-center ${
         sample && "!z-0 !static w-full"
       } `}
     >
@@ -38,7 +38,7 @@ const Navbar3 = ({ sample = false }) => {
           </div>
           <div
             className={`
-            flex flex-col space-y-10 inset-0 fixed top-0  h-[100dvh] bg-white dark:bg-gray-950 lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
+            flex flex-col space-y-10 inset-0 sticky top-0  h-[100dvh] bg-white dark:bg-gray-950 lg:!bg-transparent py-20 px-5 sm:px-10 md:px-14
             transition-all ease-linear duration-300 lg:flex-row lg:flex-1 lg:py-0 lg:px-0 lg:space-y-0 lg:gap-x-10 lg:relative lg:top-0 lg:h-full lg:items-center lg:justify-between lg:w-max
             ${
               openNavbar
@@ -94,24 +94,24 @@ const Navbar3 = ({ sample = false }) => {
               onClick={() => {
                 toggleNavbar();
               }}
-              className="p-3 rounded-full bg-emerald-600 dark:bg-emerald-500 outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
+              className="p-3 rounded-full bg-themep outline-none w-12 aspect-square flex flex-col relative justify-center items-center"
             >
               <span className="sr-only">toggle navbar</span>
               <span
                 className={`
-                w-6 h-0.5 rounded-full bg-gray-300 transition-transform duration-300 ease-linear
+                w-6 h-0.5 rounded-full bg-themef transition-transform duration-300 ease-linear
                 ${openNavbar ? "translate-y-1.5 rotate-[40deg]" : ""}
               `}
               />
               <span
                 className={`
-                w-6 origin-center  mt-1 h-0.5 rounded-full bg-gray-300 transition-all duration-300 ease-linear
+                w-6 origin-center  mt-1 h-0.5 rounded-full bg-themef transition-all duration-300 ease-linear
                 ${openNavbar ? "scale-x-0 opacity-0" : ""}
               `}
               />
               <span
                 className={`
-                w-6 mt-1 h-0.5 rounded-full bg-gray-300 transition-all duration-300 ease-linear
+                w-6 mt-1 h-0.5 rounded-full bg-themef transition-all duration-300 ease-linear
                 ${openNavbar ? "-translate-y-1.5 -rotate-[40deg]" : ""}
               `}
               />

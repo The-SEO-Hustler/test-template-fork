@@ -21,7 +21,7 @@ const Navbar4 = ({ sample = false }) => {
         onClick={() => {
           closeNavbar();
         }}
-        className={`fixed bg-gray-800/40 inset-0 z-30  ${
+        className={`sticky bg-gray-800/40 inset-0 z-30  ${
           openNavbar ? "flex lg:hidden" : "hidden"
         }
         ${sample && "!z-0"}
@@ -30,7 +30,7 @@ const Navbar4 = ({ sample = false }) => {
       <header
         className={`${
           sample && "!z-0 !static"
-        } fixed left-0  dark:bg-gray-950 top-0 w-full flex items-center h-20 border-b border-b-gray-100 dark:border-b-gray-800 z-40`}
+        } sticky left-0  dark:bg-gray-950 top-0 w-full flex items-center h-20 border-b border-b-gray-100 dark:border-b-gray-800 z-40 bg-white`}
       >
         <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
           <div className="flex items-center min-w-max">

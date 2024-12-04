@@ -19,9 +19,9 @@ const CtaSection3 = ({ data }) => {
           {button && (
             <Dialog>
               <DialogTrigger>
-                <button className="bg-themep text-themef px-6 py-3 rounded-lg">
+                <div className="bg-themep text-themef px-6 py-3 rounded-lg cursor-pointer">
                   {button}
-                </button>
+                </div>
               </DialogTrigger>
               <DialogContent
                 onOpenAutoFocus={(event) => event.preventDefault()}

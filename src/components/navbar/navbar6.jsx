@@ -61,7 +61,7 @@ const Navbar6 = ({ sample = false }) => {
             >
               <span
                 className={`
-                            h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-200 transition duration-300
+                            block h-0.5 w-6 rounded bg-black dark:bg-gray-200 transition duration-300
                             ${
                               openNavbar
                                 ? " rotate-45 translate-y-[0.33rem]"
@@ -71,7 +71,7 @@ const Navbar6 = ({ sample = false }) => {
               />
               <span
                 className={`
-                            mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-200 transition duration-300
+                            block mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-200 transition duration-300
                             ${
                               openNavbar
                                 ? " -rotate-45 -translate-y-[0.33rem]"

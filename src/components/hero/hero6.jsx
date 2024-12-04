@@ -5,7 +5,7 @@ export default function HeroSection6({ data }) {
   const { heading, text, button, skills } = data;
   return (
     <>
-      <section className="py-8 ">
+      <section className="py-4">
         <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
           <div className="mt-4 sm:mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-x-6 lg:gap-x-14 gap-y-8 md:items-end">
             <div className="space-y-4 md:space-y-6 md:col-span-2 lg:col-span-1 w-full max-w-3xl lg:max-w-none mx-auto lg:mx-0 text-center lg:text-left">

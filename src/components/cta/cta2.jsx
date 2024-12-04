@@ -34,7 +34,7 @@ const CtaSection2 = ({ data }) => {
               {button && (
                 <Dialog>
                   <DialogTrigger asChild>
-                    <button className="outline-none h-12 px-5 rounded-xl bg-themep text-themef flex items-center">
+                    <button className="outline-none h-12 px-5 rounded-xl bg-themep text-themef flex items-center cursor-pointer">
                       {button}
                     </button>
                   </DialogTrigger>
