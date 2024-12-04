@@ -28,9 +28,9 @@ jobs:
 
       - name: Reset src/lib/data.ts
         run: |
-          git checkout HEAD src/lib/data.ts
-          git add src/lib/data.ts
-          git commit -m "Keep src/lib/data.ts intact" || true  # Avoid error if no changes
+          git checkout HEAD src/lib/data.ts tailwind.config.ts
+          git add src/lib/data.ts tailwind.config.ts
+          git commit -m "Keep src/lib/data.ts and tailwind.config.ts intact" || true  # Avoid error if no changes
 
       - name: Configure Git for Authentication
         run: |
