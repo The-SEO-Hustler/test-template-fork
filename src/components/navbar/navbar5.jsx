@@ -32,7 +32,7 @@ const Navbar5 = ({ sample = false }) => {
     <header
       className={`${
         sample && "!z-0 !static"
-      } absolute left-0 top-0 w-full flex items-center h-24 z-40`}
+      } sticky left-0 top-0 w-full flex items-center h-24 z-40 bg-white`}
     >
       <nav className="relative mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5 flex gap-x-5 justify-between items-center">
         <div className="flex items-center min-w-max relative">
