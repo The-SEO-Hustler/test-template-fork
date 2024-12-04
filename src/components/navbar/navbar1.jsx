@@ -18,7 +18,6 @@ const Navbar1 = ({ sample }) => {
   return (
     <>
       <div
-        aria-hidden={true}
         onClick={() => {
           closeNavbar();
         }}
@@ -72,7 +71,7 @@ const Navbar1 = ({ sample }) => {
                   href="/#faq"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-x-100 after:bg-themep"
                 >
-                  Faq
+                  FAQs
                 </Link>
               </li>
               <li>
@@ -80,7 +79,7 @@ const Navbar1 = ({ sample }) => {
                   href="/#contact"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-x-100 after:bg-themep"
                 >
-                  Talk to us
+                  Talk to Us
                 </Link>
               </li>
             </ul>
@@ -111,14 +110,12 @@ const Navbar1 = ({ sample }) => {
               className="outline-none border-l border-l-indigo-100 dark:border-l-gray-800 pl-3 relative py-3"
             >
               <span
-                aria-hidden={true}
                 className={`
               flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
               ${navIsOpened ? "rotate-45 translate-y-[.324rem]" : ""}
             `}
               ></span>
               <span
-                aria-hidden={true}
                 className={`
               mt-2 flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
               ${navIsOpened ? "-rotate-45 -translate-y-[.324rem]" : ""}

@@ -18,7 +18,7 @@ export default function Faq({ data }) {
         <Accordion type="single" collapsible>
           {items.map((faq, idx) => {
             return (
-              <AccordionItem value={idx} key={idx}>
+              <AccordionItem value={idx + 1} key={idx + 1}>
                 <AccordionTrigger>
                   <h3>{faq.question}</h3>
                 </AccordionTrigger>

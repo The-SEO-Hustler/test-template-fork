@@ -8,8 +8,7 @@ import { pageData } from "@/lib/data";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "SEO in San Diego, CA - Your Best Local SEO Provider",
-  description: "Stop struggling to get found online. Our San Diego SEO experts help you rank higher in local search results, and attract more customers. Free audit!",
+  ...pageData.website.metadata
 };
 
 export default function RootLayout({

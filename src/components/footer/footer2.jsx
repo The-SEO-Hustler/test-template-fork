@@ -22,13 +22,13 @@ const footerItems = [
   },
   {
     id: 2,
-    text: "faq",
-    link: "/#faq",
+    text: "Case Studies",
+    link: "/#cases",
   },
   {
     id: 3,
-    text: "BLOG",
-    link: "/blog",
+    text: "FAQs",
+    link: "/#faq",
   },
 ];
 

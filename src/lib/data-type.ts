@@ -1,4 +1,16 @@
-import TestimonialSection from "@/components/testimonials/testimonials1";
+import type { Metadata } from "next";
+
+export type Section =
+  | { type: "hero"; data: Hero }
+  | { type: "cta"; data: CTA }
+  | { type: "services"; data: Features }
+  | { type: "testimonialsSection"; data: TestimonialSection }
+  | { type: "portfolio"; data: portfolio }
+  | { type: "cases"; data: cases }
+  | { type: "faq"; data: faq }
+  | { type: "contact"; data: contact }
+  | { type: "map"; data: mapSection }
+  | { type: "blogSection"; data: blogSection };
 
 type Skill = {
   title: string; // Short descriptive title (max 4 words)
@@ -11,6 +23,7 @@ type HtmlElement = string | null; //HTML element in string format;
 type Website = {
   name: string; // Brand name of the website
   logo: string | null; // Path to logo image
+  metadata?: Metadata;
 };
 
 type Navbar = {
@@ -34,7 +47,7 @@ type CTA = {
   templateNumber: 1 | 2 | 3; // CTA layout
   heading: string; // CTA headline
   text: RichText; // Detailed CTA message
-  button: string; // CTA button text
+  button: string | null; // CTA button text
 };
 
 type FeatureCard = {
@@ -61,23 +74,23 @@ type TestimonialSection = {
   text: RichText;
   testimonials: TestimonialCard[];
 };
-type portifolioCard = {
-  title: string;
+type portfolioCard = {
+  title: string | null;
   description: RichText;
-  image: string; // path to image
+  image: string | null; // path to image
 };
-type portifolio = {
+type portfolio = {
   templateNumber: 1 | 2 | 3 | 4;
   heading: string;
   text: RichText;
-  cards: portifolioCard[];
+  cards: portfolioCard[];
 };
 
 type cases = {
-  templateNumber: 1 | 2 | 3 | 4;
+  templateNumber: 1 | 2 | 3 | 4 | 5;
   heading: string;
   text: RichText;
-  cards: portifolioCard[];
+  cards: portfolioCard[];
 };
 type faqItem = {
   question: string;
@@ -90,8 +103,8 @@ type faq = {
   items: faqItem[];
 };
 type contact = {
-  title: string;
-  heading: string;
+  title: string | null;
+  heading: string | null;
   text: RichText;
 };
 
@@ -112,16 +125,7 @@ export type PageDataType = {
   website: Website;
   navbar: Navbar;
   footer: Footer;
-  hero: Hero;
-  cta: CTA | null;
-  features: Features | null;
-  testimonialsSection: TestimonialSection | null;
-  portifolio: portifolio | null;
-  cases: cases | null;
-  faq: faq | null;
-  contact: contact | null;
-  map: mapSection | null;
-  blogSection: blogSection | null;
+  sections: Section[];
   homeJsonSchema: string | null;
   gtm: string | null;
 };

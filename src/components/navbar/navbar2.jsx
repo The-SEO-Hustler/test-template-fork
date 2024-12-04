@@ -17,7 +17,6 @@ const Navbar2 = ({ sample = false }) => {
   return (
     <>
       <div
-        aria-hidden={true}
         onClick={() => {
           closeNavbar();
         }}
@@ -77,7 +76,7 @@ const Navbar2 = ({ sample = false }) => {
                   href="/#cases"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-themep"
                 >
-                  Case studies
+                  Case Studies
                 </Link>
               </li>
               <li>
@@ -85,7 +84,7 @@ const Navbar2 = ({ sample = false }) => {
                   href="/#faq"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-themep"
                 >
-                  Faq
+                  FAQs
                 </Link>
               </li>
               <li>
@@ -93,7 +92,7 @@ const Navbar2 = ({ sample = false }) => {
                   href="/#contact"
                   className="relative py-2.5 duration-300 ease-linear hover:text-themep after:absolute after:w-full after:left-0 after:bottom-0 after:h-px after:rounded-md after:origin-left after:ease-linear after:duration-300 after:scale-x-0 hover:after:scale-100 after:bg-themep"
                 >
-                  Talk to us
+                  Talk to Us
                 </Link>
               </li>
             </ul>
@@ -101,7 +100,7 @@ const Navbar2 = ({ sample = false }) => {
               <Dialog>
                 <DialogTrigger asChild>
                   <button className="px-6 items-center h-12 rounded-3xl text-themep border border-gray-100 dark:border-gray-800 dark:text-white bg-gray-100 dark:bg-gray-900 duration-300 ease-linear flex justify-center w-full sm:w-auto">
-                    Book a call
+                    Book a Call
                   </button>
                 </DialogTrigger>
                 <DialogContent
@@ -122,14 +121,12 @@ const Navbar2 = ({ sample = false }) => {
               className="outline-none border-l border-l-indigo-100 dark:border-l-gray-800 pl-3 relative py-3"
             >
               <span
-                aria-hidden={true}
                 className={`
               flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
               ${navIsOpened ? "rotate-45 translate-y-[.324rem]" : ""}
             `}
               />
               <span
-                aria-hidden={true}
                 className={`
               mt-2 flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
               ${navIsOpened ? "-rotate-45 -translate-y-[.324rem]" : ""}

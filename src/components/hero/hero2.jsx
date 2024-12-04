@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function HeroSection2({ data }) {
-  const { heading, text, button } = data;
+  const { heading, text, button, tag } = data;
   return (
     <>
       <main className="w-full">
@@ -30,8 +30,9 @@ export default function HeroSection2({ data }) {
               <Image
                 src="/hero.webp"
                 alt=""
-                width={1850}
-                height={1200}
+                priority
+                width={650}
+                height={500}
                 className="lg:absolute w-full lg:inset-x-0 object-cover lg:h-full"
               />
               <div className="absolute left-1/2 -translate-x-1/2 lg:-translate-x-0 -bottom-10 w-60 p-4 rounded-lg bg-white dark:bg-gray-950 border dark:border-gray-800">
@@ -67,11 +68,7 @@ export default function HeroSection2({ data }) {
                 </div>
                 <div>
                   <p className="text-lg font-semibold text-indigo-950 dark:text-white">
-                    45+ employees
-                  </p>
-                  <p className="text-gray-700 dark:text-gray-300 flex">
-                    <span className="text-yellow-500 text-xl">★</span> 5.0 (2.5k
-                    reviews)
+                    {tag}
                   </p>
                 </div>
               </div>

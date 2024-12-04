@@ -4,18 +4,22 @@ const BlogCard = ({ image, title, description }) => {
   return (
     <div className="flex flex-col lg:flex-row gap-8 p-5 rounded-md bg-gray-100 dark:bg-gray-900 border border-gray-200/70 dark:border-gray-800/80 ">
       <div className="w-full lg:w-2/5 lg:h-full">
-        <Image
-          src={image}
-          alt="post cover"
-          width={1300}
-          height={1200}
-          className="rounded aspect-video lg:aspect-auto lg:h-full w-full object-cover"
-        />
+        {image && (
+          <Image
+            src={image}
+            alt="post cover"
+            width={1300}
+            height={1200}
+            className="rounded aspect-video lg:aspect-auto lg:h-full w-full object-cover"
+          />
+        )}
       </div>
       <div className="flex-1 flex flex-col space-y-6">
-        <div className="text-xl font-semibold text-gray-900 dark:text-white">
-          {title}
-        </div>
+        {title && (
+          <div className="text-xl font-semibold text-gray-900 dark:text-white">
+            {title}
+          </div>
+        )}
         <div
           className="text-gray-700 dark:text-gray-300 text-sm"
           dangerouslySetInnerHTML={{ __html: description }}

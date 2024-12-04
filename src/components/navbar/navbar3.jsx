@@ -61,7 +61,7 @@ const Navbar3 = ({ sample = false }) => {
                   href="/#faq"
                   className="transition ease-linear hover:text-gray-900 dark:hover:text-white"
                 >
-                  FAQ
+                  FAQs
                 </Link>
               </li>
             </ul>
@@ -71,7 +71,7 @@ const Navbar3 = ({ sample = false }) => {
                 className="flex justify-center gap-x-3 items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white
                     border-b bg-gray-700 dark:border-blue-300 hover:border-b-gray-900 dark:hover:border-b-white bg-transparent"
               >
-                Get in touch
+                Get in Touch
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

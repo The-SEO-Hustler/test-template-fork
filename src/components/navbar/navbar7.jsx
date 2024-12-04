@@ -19,12 +19,12 @@ const navItems = [
   },
   {
     id: 3,
-    text: "faq",
+    text: "FAQs",
     link: "/#faq",
   },
   {
     id: 4,
-    text: "Case studies",
+    text: "Case Studies",
     link: "/#cases",
   },
 ];
@@ -106,7 +106,6 @@ const Navbar7 = ({ sample = false }) => {
             >
               <span className="sr-only">Toggle navbar</span>
               <span
-                aria-hidden="true"
                 className={`
                             flex h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
                             ${
@@ -117,7 +116,6 @@ const Navbar7 = ({ sample = false }) => {
                         `}
               />
               <span
-                aria-hidden="true"
                 className={`
                             flex mt-2 h-0.5 w-6 rounded bg-gray-800 dark:bg-gray-300 transition duration-300
                             ${

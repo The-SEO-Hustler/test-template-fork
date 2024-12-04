@@ -1,5 +1,4 @@
 import React from "react";
-import { pageData } from "@/lib/data";
 import Hero1 from "./hero1";
 import Hero2 from "./hero2";
 import Hero3 from "./hero3";
@@ -9,7 +8,7 @@ import Hero6 from "./hero6";
 import Hero7 from "./hero7";
 import Hero8 from "./hero8";
 
-const HeroSelector = () => {
+const HeroSelector = ({ data }) => {
   const heroComponents = {
     1: Hero1,
     2: Hero2,
@@ -21,9 +20,9 @@ const HeroSelector = () => {
     8: Hero8,
   };
 
-  const SelectedHero = heroComponents[pageData.hero.templateNumber] || Hero1;
+  const SelectedHero = heroComponents[data.templateNumber] || Hero1;
 
-  return <SelectedHero data={pageData.hero} />;
+  return <SelectedHero data={data} />;
 };
 
 export default HeroSelector;

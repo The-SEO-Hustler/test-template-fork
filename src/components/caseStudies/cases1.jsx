@@ -21,19 +21,23 @@ const Cases1 = ({ data }) => {
                 key={idx}
                 className="relative aspect-[5/3.8] rounded-lg overflow-hidden"
               >
-                <Image
-                  src={card.image}
-                  alt="project cover"
-                  width={1300}
-                  height={900}
-                  className="w-full h-full object-cover"
-                />
+                {card.image && (
+                  <Image
+                    src={card.image}
+                    alt="project cover"
+                    width={1300}
+                    height={900}
+                    className="w-full h-full object-cover"
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-800 dark:from-gray-900 flex flex-col justify-end p-5 space-y-5 text-gray-300">
-                  <h3 className="font-semibold text-white text-2xl">
-                    {card.title}
-                  </h3>
+                  {card.title && (
+                    <h3 className="font-semibold text-white text-2xl">
+                      {card.title}
+                    </h3>
+                  )}
                   <div
-                    className="text-gray-300 line-clamp-2"
+                    className="text-gray-300"
                     dangerouslySetInnerHTML={{ __html: card.description }}
                   ></div>
                 </div>

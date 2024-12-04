@@ -25,9 +25,9 @@ const FeatureCard = ({ title, description, icon }) => {
       <span className="p-2 rounded-md bg-themep/10 text-themep dark:bg-gray-900 dark:text-blue-500 flex w-max">
         {iconRender(icon)}
       </span>
-      <h2 className="text-gray-800 dark:text-gray-100 text-xl font-semibold">
+      <h3 className="text-gray-800 dark:text-gray-100 text-xl font-semibold">
         {title}
-      </h2>
+      </h3>
       <div
         className="text-gray-700 dark:text-gray-300 mx-auto max-w-md"
         dangerouslySetInnerHTML={{ __html: description }}

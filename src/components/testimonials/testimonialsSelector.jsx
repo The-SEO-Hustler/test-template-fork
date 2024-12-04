@@ -3,18 +3,16 @@ import { pageData } from "@/lib/data";
 import TestimonialsSection1 from "./testimonials1";
 import TestimonialsSection2 from "./testimonials2";
 
-const TestimonialsSectionSelector = () => {
+const TestimonialsSectionSelector = ({ data }) => {
   const TestimonialsSectionComponents = {
     1: TestimonialsSection1,
     2: TestimonialsSection2,
   };
 
   const SelectedTestimonialsSection =
-    TestimonialsSectionComponents[
-      pageData.testimonialsSection.templateNumber
-    ] || TestimonialsSection1;
+    TestimonialsSectionComponents[data.templateNumber] || TestimonialsSection1;
 
-  return <SelectedTestimonialsSection data={pageData.testimonialsSection} />;
+  return <SelectedTestimonialsSection data={data} />;
 };
 
 export default TestimonialsSectionSelector;

@@ -17,7 +17,7 @@ export default function HeroSection({ data }) {
           >
             <div className="h-full md:h-1/2 lg:h-full w-full bg-gradient-to-tr opacity-40 dark:blur-2xl dark:from-[#570cac] dark:opacity-20"></div>
           </div>
-          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-10 xl:gap-14 relative pt-16 md:pt-24 lg:max-w-none max-w-2xl md:max-w-3xl mx-auto">
             <div className="lg:py-6">
               <div className="text-center lg:text-left">
                 <span className="px-2 py-1 rounded-md bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
@@ -59,40 +59,40 @@ export default function HeroSection({ data }) {
               <div className="flex items-center text-center flex-col sm:flex-row gap-4 sm:gap-0 mt-8 w-max mx-auto lg:mx-0">
                 <div className="flex items-center -space-x-2">
                   <Image
-                    src="/assets/blog/authors/joe.jpeg"
-                    height={900}
-                    width={1240}
+                    src="/hero/person1.jpeg"
+                    height={40}
+                    width={40}
+                    priority
                     alt="avatar"
                     className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-gray-950 object-cover"
                   />
                   <Image
-                    src="/assets/blog/authors/joe.jpeg"
-                    height={900}
-                    width={1240}
+                    src="/hero/person2.jpeg"
+                    height={40}
+                    width={40}
                     alt="avatar"
+                    priority
                     className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-gray-950 object-cover"
                   />
                   <Image
-                    src="/assets/blog/authors/joe.jpeg"
-                    height={900}
-                    width={1240}
+                    src="/hero/person3.jpeg"
+                    height={40}
+                    width={40}
                     alt="avatar"
+                    priority
                     className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-gray-950 object-cover"
                   />
                   <Image
-                    src="/assets/blog/authors/joe.jpeg"
-                    height={900}
-                    width={1240}
+                    src="/hero/person4.jpeg"
+                    height={40}
+                    width={40}
                     alt="avatar"
+                    priority
                     className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-gray-950 object-cover"
                   />
-                  <span className="w-10 h-10 rounded-full ring-4 ring-white dark:ring-gray-950 bg-gray-200 dark:bg-gray-800 text-xs text-gray-700 dark:text-gray-300 flex items-center justify-center">
-                    300+
-                  </span>
                 </div>
                 <span className="pl-2 text-gray-600 dark:text-gray-200">
-                  {" "}
-                  WordWide listners{" "}
+                  {tag}
                 </span>
               </div>
             </div>
@@ -103,9 +103,9 @@ export default function HeroSection({ data }) {
                   <Image
                     src="/hero.webp"
                     alt=""
-                    width={900}
-                    height={900}
-                    loading="lazy"
+                    width={600}
+                    height={500}
+                    priority
                     className="w-full h-full rounded-2xl object-cover"
                   />
                 </div>
@@ -113,9 +113,9 @@ export default function HeroSection({ data }) {
                   <Image
                     src="/hero2.webp"
                     alt=""
-                    width={900}
-                    height={900}
-                    loading="lazy"
+                    width={600}
+                    height={500}
+                    priority
                     className="w-full h-full rounded-2xl object-cover"
                   />
                 </div>
